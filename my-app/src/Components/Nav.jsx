@@ -4,20 +4,20 @@ function Nav() {
   return (
     <div>
       <aside>
-      <ul class="Links">
-        <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+      <ul className="Links">
+        <li onclick="Navigate(0)" className="activeLink"><i className="fa-solid fa-house"></i>
           <p>Home</p>
         </li>
-        <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
+        <li onclick="Navigate(1)"><i className="fa-solid fa-user"></i>
           <p>About Me</p>
         </li>
-        <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+        <li onclick="Navigate(2)"><i className="fa-solid fa-list"></i>
           <p>Services</p>
         </li>
-        <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+        <li onclick="Navigate(3)"><i className="fa-solid fa-images"></i>
           <p>Gallery</p>
         </li>
-        <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+        <li onclick="Navigate(4)"><i className="fa-solid fa-comments"></i>
           <p>Contact Me</p>
         </li>
       </ul>
