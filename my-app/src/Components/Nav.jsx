@@ -5,7 +5,7 @@ function Nav() {
     <div>
       <aside>
       <ul className="Links">
-        <li onclick="Navigate(0)" className="activeLink"><i className="fa-solid fa-house"></i>
+        <li onclick="Navigate(0)" className="activeLink">
           <p>Home</p>
         </li>
         <li onclick="Navigate(1)"><i className="fa-solid fa-user"></i>
