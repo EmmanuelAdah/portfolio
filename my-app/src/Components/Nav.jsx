@@ -1,11 +1,11 @@
 import React from 'react'
+import "../index.css"
 
 function Nav() {
   return (
-    <div>
       <aside>
       <ul className="Links">
-        <li onclick="Navigate(0)" className="activeLink">
+        <li onclick="Navigate(0)" >
           <p>Home</p>
         </li>
         <li onclick="Navigate(1)"><i className="fa-solid fa-user"></i>
@@ -22,7 +22,6 @@ function Nav() {
         </li>
       </ul>
     </aside>
-    </div>
   )
 }
 

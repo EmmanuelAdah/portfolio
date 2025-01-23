@@ -1,21 +1,19 @@
-import { useState } from 'react'
+import React from 'react'
 import Nav from './Components/Nav'
 import "./index.css"
 import Landing from './Components/Landing'
 import Swiper from './Components/Swiper'
+import Form from './Components/Form'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
     <main>
     <Nav/>
     <Landing/>
     </main>
-    <swiperSlide>
       <Swiper/>
-    </swiperSlide>
+      <Form/>
     </>
   )
 }

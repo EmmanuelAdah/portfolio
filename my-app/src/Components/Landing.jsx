@@ -1,5 +1,6 @@
 import React from 'react'
 import ButtonHome from './ButtonHome'
+import "../index.css"
 
 function Landing() {
   return (
