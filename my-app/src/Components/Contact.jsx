@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 
+emailjs.init('dB_boUSzUtccX2jvZ');
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -26,10 +28,7 @@ function Contact() {
     setStatus('')
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init('dB_boUSzUtccX2jvZ') // Your actual public key
-      
-      // Create a more comprehensive template params object
+
       const templateParams = {
         to_name: 'Okafor Ifechukwu',
         to_email: 'Ifechukwuw@gmail.com',
@@ -40,29 +39,18 @@ function Contact() {
         reply_to: formData.email
       }
 
-      // Using EmailJS send method with direct template
       const result = await emailjs.send(
-        'gmail', // Using gmail as service (common default)
-        'contact_form', // Common template name
-        templateParams,
-        'dB_boUSzUtccX2jvZ' // Your public key
+        'service_f7ycv9r',
+        'template_wqrj5gv',
+        templateParams
       )
 
       console.log('Email sent successfully:', result)
       setStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
-      console.log('Email sending failed:', error)
-      // For now, show success even if EmailJS setup isn't complete
-      // This allows testing the form functionality
-      setStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
-      console.log('Form submitted with data:', {
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message
-      })
+      console.error('Email sending failed:', error);
+      setStatus(`Failed to send email: ${error.text || 'Unknown error'}`);
     } finally {
       setIsLoading(false)
     }
@@ -111,7 +99,7 @@ function Contact() {
     {
       icon: FaTwitter,
       name: 'Twitter / X',
-      url: 'https://x.com/mac_winner', // Replace with your Twitter
+      url: 'https://x.com/mac_winner',
       color: '#1DA1F2'
     }
   ]

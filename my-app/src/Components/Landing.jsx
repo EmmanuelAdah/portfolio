@@ -1,10 +1,25 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaDownload, FaWhatsapp } from 'react-icons/fa'
+import profileImg from '../assets/Image/profile.png'
 
 function Landing() {
   const handleDownloadCV = () => {
-    alert('CV download functionality - please add your CV file to the public folder')
+    const link = document.createElement('a')
+    link.href = '/assets/CV.pdf'
+    link.download = 'Okafor_Ifechukwu_CV.pdf' 
+    link.click()
+
+    link.onerror = () => {
+      alert('CV file not found. Please add your CV.pdf file to the public/assets folder.')
+    }
+  }
+
+  const handleHireMe = () => {
+    const subject = 'Hiring Inquiry - Project Discussion'
+    const body = 'Hello Okafor Ifechukwu,\n\nI saw your portfolio and would like to discuss a potential project opportunity with you.\n\nPlease let me know your availability for a call.\n\nBest regards'
+    const mailtoUrl = `mailto:Ifechukwuw@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = mailtoUrl
   }
 
   const handleWhatsApp = () => {
@@ -54,7 +69,7 @@ function Landing() {
               
               <motion.button 
                 className="btn btn-outline"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={handleHireMe}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -67,11 +82,11 @@ function Landing() {
             className="landing-image"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}          
           >
             <div className="profile-image">
               <div className="placeholder-image">
-                <img src="../assets/image/profile.webp" alt="Profile" />
+                <img src={profileImg} alt="Profile" />
                 <span>Your Photo</span>
               </div>
             </div>
