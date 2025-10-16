@@ -6,15 +6,14 @@ function About() {
   return (
     <section id="about" className="about">
       <div className="container">
-        <motion.div 
-          className="section-header"
+        <motion.div
+            className="section-header"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <h2>About Me</h2>
-          <p>Get to know me better</p>
         </motion.div>
         
         <div className="about-content">
@@ -25,12 +24,13 @@ function About() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3>I'm Okafor Ifechukwu, a passionate Software Engineer</h3>
+            <h3>I'm Emmanuel Adah, a passionate Software Engineer</h3>
             <p>
-              With a strong foundation in software development and a passion for creating 
-              innovative solutions, I specialize in full-stack web development using modern 
-              technologies. I have experience in building scalable applications, working with 
-              databases, and creating user-friendly interfaces.
+              With robust background in software development and a strong commitment to
+              innovation, I specialize in full-stack web development using modern frameworks
+              and technologies. My expertise includes architecting scalable applications,
+              optimizing database performance, and building intuitive user interfaces that
+              enhance usability and engagement.
             </p>
             <p>
               My journey in software engineering started with a curiosity about how things work 
@@ -45,17 +45,10 @@ function About() {
             
             <div className="about-stats">
               <div className="stat">
-                <h4>5+</h4>
-                <p>Projects Completed</p>
-              </div>
-              <div className="stat">
                 <h4>2+</h4>
                 <p>Years Experience</p>
               </div>
-              <div className="stat">
-                <h4>10+</h4>
-                <p>Happy Clients</p>
-              </div>
+
               <div className="stat">
                 <h4>24/7</h4>
                 <p>Support</p>
@@ -71,25 +64,26 @@ function About() {
             viewport={{ once: true }}
           >
             <h4>What I Do</h4>
+            <br/>
             <div className="skills-preview-grid">
               <div className="skill-item">
                 <FaCode className="skill-icon" />
-                <h5>Frontend Development</h5>
+                <h4>Frontend Development</h4>
                 <p>Creating responsive and interactive user interfaces</p>
               </div>
               <div className="skill-item">
                 <FaLaptopCode className="skill-icon" />
-                <h5>Backend Development</h5>
+                <h4>Backend Development</h4>
                 <p>Building robust server-side applications and APIs</p>
               </div>
               <div className="skill-item">
                 <FaDatabase className="skill-icon" />
-                <h5>Database Design</h5>
+                <h4>Database Design</h4>
                 <p>Designing efficient database structures and queries</p>
               </div>
               <div className="skill-item">
                 <FaMobile className="skill-icon" />
-                <h5>Mobile Development</h5>
+                <h4>Mobile Development</h4>
                 <p>Creating mobile-friendly applications and PWAs</p>
               </div>
             </div>
