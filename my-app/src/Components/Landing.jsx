@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaDownload, FaWhatsapp } from 'react-icons/fa'
-import profileImg from '../assets/Image/profile.png'
+import profileImg from '../assets/Image/profile.jpg'
 
 function Landing() {
   const handleDownloadCV = () => {
@@ -15,15 +15,15 @@ function Landing() {
     }
   }
 
-  const handleHireMe = () => {
-    const subject = 'Hiring Inquiry - Project Discussion'
-    const body = 'Hello Okafor Ifechukwu,\n\nI saw your portfolio and would like to discuss a potential project opportunity with you.\n\nPlease let me know your availability for a call.\n\nBest regards'
-    const mailtoUrl = `mailto:Ifechukwuw@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    window.location.href = mailtoUrl
-  }
+  // const handleHireMe = () => {
+  //   const subject = 'Hiring Inquiry - Project Discussion'
+  //   const body = 'Hello Emmanuel Adah,\n\nI saw your portfolio and would like to discuss a potential project opportunity with you.\n\nPlease let me know your availability for a call.\n\nBest regards'
+  //   const mailtoUrl = `mailto:edogbanya02@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  //   window.location.href = mailtoUrl
+  // }
 
   const handleWhatsApp = () => {
-    const phoneNumber = '+2348068853611'
+    const phoneNumber = '+2348160509785'
     const message = 'Hello! I saw your portfolio and would like to discuss a project.'
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -40,11 +40,11 @@ function Landing() {
             transition={{ duration: 0.8 }}
           >
             <h3>Hello, I'm</h3>
-            <h1>Okafor Ifechukwu</h1>
+            <h1>Emmanuel Adah</h1>
             <h2>Software Engineer & Full-Stack Developer</h2>
             <p>
-              Passionate software engineer with expertise in modern web technologies. 
-              I create efficient, scalable, and user-friendly applications that solve 
+              With expertise in modern web technologies.
+              I create efficient, scalable, and user-friendly applications that solves
               real-world problems. Let's bring your ideas to life!
             </p>
             
@@ -67,14 +67,14 @@ function Landing() {
                 <FaWhatsapp /> WhatsApp Me
               </motion.button>
               
-              <motion.button 
-                className="btn btn-outline"
-                onClick={handleHireMe}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Hire Me
-              </motion.button>
+              {/*<motion.button */}
+              {/*  className="btn btn-outline"*/}
+              {/*  onClick={handleHireMe}*/}
+              {/*  whileHover={{ scale: 1.05 }}*/}
+              {/*  whileTap={{ scale: 0.95 }}*/}
+              {/*>*/}
+              {/*  Hire Me*/}
+              {/*</motion.button>*/}
             </div>
           </motion.div>
           
