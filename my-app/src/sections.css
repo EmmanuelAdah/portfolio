@@ -261,11 +261,10 @@
 }
 
 .service-features li {
-  padding: 0.75rem 0;
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border-color);
   position: relative;
-  padding-left: 1.5rem;
+  padding: 0.75rem 0 0.75rem 1.5rem;
 }
 
 .service-features li::before {
