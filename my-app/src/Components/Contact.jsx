@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 
-emailjs.init('dB_boUSzUtccX2jvZ');
+emailjs.init('rw6KJZbEdVnIDOuUU');
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -30,8 +30,8 @@ function Contact() {
     try {
 
       const templateParams = {
-        to_name: 'Okafor Ifechukwu',
-        to_email: 'Ifechukwuw@gmail.com',
+        to_name: 'Emmanuel Adah',
+        to_email: 'edogbanya02@gmail.com',
         from_name: formData.name,
         from_email: formData.email,
         subject: formData.subject,
@@ -40,8 +40,8 @@ function Contact() {
       }
 
       const result = await emailjs.send(
-        'service_f7ycv9r',
-        'template_wqrj5gv',
+        'service_06sa2jc',
+        'template_31e18jd',
         templateParams
       )
 
@@ -60,20 +60,17 @@ function Contact() {
     {
       icon: FaPhone,
       title: 'Phone',
-      content: '+234 8068853611',
-      link: 'tel:+2348068853611'
+      content: '+234 8160509785',
     },
     {
       icon: FaEnvelope,
       title: 'Email',
-      content: 'Ifechukwuw@gmail.com',
-      link: 'mailto:Ifechukwuw@gmail.com'
+      content: 'edogbanya02@gmail.com',
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
       content: 'Lagos, Nigeria',
-      link: '#'
     }
   ]
 
@@ -81,19 +78,19 @@ function Contact() {
     {
       icon: FaWhatsapp,
       name: 'WhatsApp',
-      url: 'https://wa.me/2348068853611?text=Hello!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.',
+      url: 'https://wa.me/message/2JAJ6FHVMSGAO1',
       color: '#25D366'
     },
     {
       icon: FaLinkedin,
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/ifechukwu-okafor1',
+      url: 'https://www.linkedin.com/in/edogbanya-emmanuel-767792312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       color: '#0077B5'
     },
     {
       icon: FaGithub,
       name: 'GitHub',
-      url: 'https://github.com/Macwinner1',
+      url: 'https://github.com/EmmanuelAdah',
       color: '#333'
     },
     {
@@ -111,7 +108,7 @@ function Contact() {
           className="section-header"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
         >
           <h2>Get In Touch</h2>
@@ -123,7 +120,7 @@ function Contact() {
             className="contact-info"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
             <h3>Let's talk about everything!</h3>
@@ -263,7 +260,7 @@ function Contact() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  Sorry, there was an error sending your message. Please try again or contact me directly.
+                  Sorry, there was an error sending message. Please try again or contact me directly.
                 </motion.div>
               )}
             </form>
