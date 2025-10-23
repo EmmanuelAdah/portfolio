@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs } from 'react-icons/fa'
+import {FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs, FaJava} from 'react-icons/fa'
 import { SiMongodb, SiExpress, SiDjango, SiTailwindcss } from 'react-icons/si'
 
 function Projects() {
@@ -9,14 +9,14 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React frontend, Node.js backend, and MongoDB database. Features include user authentication, payment integration, and admin dashboard.',
+      title: 'Library Management System',
+      description: 'Full-stack library manager that enhances learning with audio, video, and text books. Built with React frontend, spring-boot backend, and MongoDB database. Features include user authentication & authorization, payment integration for book access, and earning of commissions for added values by users',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-ecommerce-project.vercel.app', // Replace with actual Vercel URL
       githubUrl: 'https://github.com/yourusername/ecommerce-project', // Replace with actual GitHub URL
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
       category: 'fullstack',
-      techIcons: [FaReact, FaNodeJs, SiMongodb, SiExpress]
+      techIcons: [FaReact, FaJava, SiMongodb, SiExpress]
     },
     {
       id: 2,
@@ -85,7 +85,7 @@ function Projects() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          {categories.map(category => (
+          {categories?.data?.map(category => (
             <button
               key={category.id}
               className={`filter-btn ${activeFilter === category.id ? 'active' : ''}`}
@@ -121,8 +121,7 @@ function Projects() {
                     >
                       <FaExternalLinkAlt />
                     </motion.a>
-                    <motion.a 
-                      href={project.githubUrl} 
+                    <motion.a href={project.githubUrl}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="project-link"
@@ -166,7 +165,7 @@ function Projects() {
           <p>Check out more of my projects on GitHub or get in touch to discuss your next project.</p>
           <div className="cta-buttons">
             <motion.a 
-              href="https://github.com/Macwinner1"
+              href="https://github.com/EmmanuelAdah"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-button secondary"
