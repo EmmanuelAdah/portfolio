@@ -28,7 +28,6 @@ function Contact() {
     setStatus('')
 
     try {
-
       const templateParams = {
         to_name: 'Emmanuel Adah',
         to_email: 'edogbanya02@gmail.com',
@@ -38,7 +37,6 @@ function Contact() {
         message: formData.message,
         reply_to: formData.email
       }
-
       const result = await emailjs.send(
         'service_06sa2jc',
         'template_31e18jd',
@@ -171,7 +169,7 @@ function Contact() {
                       whileTap={{ scale: 0.9 }}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.3, delay: index * 0.01 }}
                       viewport={{ once: true }}
                     >
                       <Icon />

@@ -19,7 +19,7 @@ function Footer() {
             viewport={{ once: true }}
           >
             <p>
-              Made with <FaHeart className="heart-icon" /> by Emmanuel Adah © {new Date().getFullYear()}
+              &copy;2025. Let's build values
             </p>
             <p className="footer-subtitle">
               Software Engineer | Full-Stack Developer | Problem Solver

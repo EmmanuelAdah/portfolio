@@ -6,8 +6,8 @@ import { SiDjango, SiMongodb, SiTailwindcss } from 'react-icons/si'
 function Skills() {
 
   const skills = [
-    { name: 'HTML5', icon: FaHtml5, level: 95, color: '#E34F26' },
-    { name: 'CSS3', icon: FaCss3Alt, level: 90, color: '#1572B6' },
+    { name: 'HTML5', icon: FaHtml5, level: 70, color: '#E34F26' },
+    { name: 'CSS3', icon: FaCss3Alt, level: 80, color: '#1572B6' },
     { name: 'JavaScript', icon: FaJs, level: 88, color: '#F7DF1E' },
     { name: 'React', icon: FaReact, level: 85, color: '#61DAFB' },
     // { name: 'Node.js', icon: FaNodeJs, level: 80, color: '#339933' },
