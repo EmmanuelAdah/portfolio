@@ -1,6 +1,6 @@
 import React from 'react'
-import {motion} from 'framer-motion'
-import {FaDownload, FaWhatsapp} from 'react-icons/fa'
+import { motion } from 'framer-motion'
+import { FaDownload, FaWhatsapp } from 'react-icons/fa'
 import profileImg from '../assets/Images/profile.jpg'
 
 function Landing() {
@@ -42,9 +42,10 @@ function Landing() {
             <h1>Emmanuel Adah</h1>
             <h2>Software Engineer & Full-Stack Developer</h2>
             <p>
-              With expertise in modern web technologies.
-              I create efficient, scalable, and user-friendly applications that solves
-              real-world problems. Let's bring your ideas to life!
+              Leveraging expertise in modern web technologies, I build efficient,
+              scalable, and user-centric applications designed to solve real-world
+              problems. <br/>
+              Let’s turn your ideas into powerful digital solutions.
             </p>
             
             <div className="landing-buttons">
