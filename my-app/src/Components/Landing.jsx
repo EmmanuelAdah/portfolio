@@ -7,7 +7,7 @@ function Landing() {
   const handleDownloadCV = () => {
     const link = document.createElement('a')
     link.href = '/assets/CV.pdf'
-    link.download = 'Okafor_Ifechukwu_CV.pdf' 
+    link.download = 'Emmanuel_CV.pdf'
     link.click()
 
     link.onerror = () => {
