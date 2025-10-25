@@ -88,7 +88,7 @@ function Skills() {
               </div>
               <div className="category">
                 <h4>Backend</h4>
-                <p>Python, Java</p>
+                <p>Java, Python, NodeJs</p>
               </div>
               <div className="category">
                 <h4>Database</h4>
@@ -96,7 +96,7 @@ function Skills() {
               </div>
               <div className="category">
                 <h4>Tools</h4>
-                <p>Git, VS Code, Postman, Docker, GitAction</p>
+                <p>Git, Postman, Docker, GitAction, </p>
               </div>
             </div>
           </motion.div>

@@ -568,7 +568,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(152, 97, 97, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: var(--shadow-md);
@@ -625,7 +625,7 @@
 
 .submit-btn {
   width: 100%;
-  background: var(--gradient-secondary);
+  background: #2c945c;
   color: white;
   border: none;
   padding: 1.25rem;
