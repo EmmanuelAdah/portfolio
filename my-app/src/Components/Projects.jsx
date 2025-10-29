@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import {FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs, FaJava, FaDatabase} from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs, FaJava, FaDatabase } from 'react-icons/fa'
 import { SiMongodb, SiExpress, SiDjango, SiTailwindcss } from 'react-icons/si'
-import {AiFillSkype} from "react-icons/ai";
+import { AiFillSkype } from "react-icons/ai";
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -29,7 +29,7 @@ function Projects() {
           'Features include secure authentication, real-time budget insights, and responsive design for seamless cross-device access.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-taskmanager-project.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/task-manager', // Replace with actual GitHub URL
+      githubUrl: 'https://github.com/EmmanuelAdah/expense_tracker__backend', // Replace with actual GitHub URL
       technologies: ['Java(Spring Boot)', 'React', 'PostgreSQL'],
       category: 'fullstack',
       techIcons: [FaReact, FaJava, SiTailwindcss, FaDatabase]
@@ -40,7 +40,7 @@ function Projects() {
       description: 'Responsive portfolio website built with React and modern CSS animations. Features smooth scrolling, contact forms, and project showcase.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-portfolio-project.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/portfolio', // Replace with actual GitHub URL
+      githubUrl: 'https://github.com/EmmanuelAdah/portfolio', // Replace with actual GitHub URL
       technologies: ['React', 'JavaScript', 'CSS3', 'Framer Motion'],
       category: 'frontend',
       techIcons: [FaReact, FaJs, SiTailwindcss]
@@ -52,7 +52,7 @@ function Projects() {
           'mass communication through customizable email templates, secure user authentication, and real-time delivery tracking.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-weather-app.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/weather-dashboard', // Replace with actual GitHub URL
+      githubUrl: 'https://github.com/EmmanuelAdah/email_sender_backend',
       technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
       category: 'frontend',
       techIcons: [FaReact, FaJs]
