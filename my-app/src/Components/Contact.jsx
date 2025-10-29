@@ -15,10 +15,10 @@ function Contact() {
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState('')
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (event) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
     })
   }
 
