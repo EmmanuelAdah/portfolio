@@ -77,9 +77,9 @@ function Skills() {
 
             <h3>Technical Expertise</h3>
             <p>
-              I have hands-on experience with modern web development technologies. 
-              From frontend frameworks like React to backend technologies like Node.js, Java(SpringBoot), and Python(Django), 
-              in building full-stack applications that is functional, scalable and enhances good user experience.
+              I have hands-on experience with modern web development technologies, building functional and
+              scalable full-stack applications that prioritize user experience. My expertise spans frontend
+              frameworks like React and backend technologies including Node.js, Java (Spring Boot).
             </p>
             <div className="expertise-categories">
               <div className="category">
