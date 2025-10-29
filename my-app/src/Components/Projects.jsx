@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import {FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs, FaJava} from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs, FaJava, FaDatabase } from 'react-icons/fa'
 import { SiMongodb, SiExpress, SiDjango, SiTailwindcss } from 'react-icons/si'
+import { AiFillSkype } from "react-icons/ai";
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -10,24 +11,28 @@ function Projects() {
     {
       id: 1,
       title: 'Library Management System',
-      description: 'Full-stack library manager that enhances learning with audio, video, and text books. Built with React frontend, spring-boot backend, and MongoDB database. Features include user authentication & authorization, payment integration for book access, and earning of commissions for added values by users',
+      description: 'Full-stack library manager that enhances learning with audio, video, and text books. Built with React frontend, ' +
+          'spring-boot backend, and MongoDB database. Features include user authentication & authorization, payment integration for' +
+          ' book access, and earning of commissions for added values by users.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-ecommerce-project.vercel.app', // Replace with actual Vercel URL
       githubUrl: 'https://github.com/yourusername/ecommerce-project', // Replace with actual GitHub URL
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+      technologies: ['React', 'Node.js', 'MongoDB'],
       category: 'fullstack',
-      techIcons: [FaReact, FaJava, SiMongodb, SiExpress]
+      techIcons: [FaReact, FaJava, SiMongodb]
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A modern task management application built with React and Django REST API. Features drag-and-drop functionality, real-time updates, and team collaboration.',
+      title: 'Expense Tracker App',
+      description: 'A full-stack expense tracker built with React (frontend), Spring Boot (backend), and PostgreSQL. ' +
+          'It enables users to record, categorize, and visualize their spending through intuitive dashboards and RESTful APIs. ' +
+          'Features include secure authentication, real-time budget insights, and responsive design for seamless cross-device access.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-taskmanager-project.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/task-manager', // Replace with actual GitHub URL
-      technologies: ['React', 'Django', 'Python', 'PostgreSQL'],
+      githubUrl: 'https://github.com/EmmanuelAdah/expense_tracker__backend', // Replace with actual GitHub URL
+      technologies: ['Java(Spring Boot)', 'React', 'PostgreSQL'],
       category: 'fullstack',
-      techIcons: [FaReact, SiDjango, FaPython]
+      techIcons: [FaReact, FaJava, SiTailwindcss, FaDatabase]
     },
     {
       id: 3,
@@ -35,18 +40,19 @@ function Projects() {
       description: 'Responsive portfolio website built with React and modern CSS animations. Features smooth scrolling, contact forms, and project showcase.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-portfolio-project.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/portfolio', // Replace with actual GitHub URL
+      githubUrl: 'https://github.com/EmmanuelAdah/portfolio', // Replace with actual GitHub URL
       technologies: ['React', 'JavaScript', 'CSS3', 'Framer Motion'],
       category: 'frontend',
       techIcons: [FaReact, FaJs, SiTailwindcss]
     },
     {
       id: 4,
-      title: 'Weather Dashboard',
-      description: 'Interactive weather dashboard with location-based forecasts, charts, and responsive design. Built with React and integrated with weather APIs.',
+      title: 'Bulk Email Sender',
+      description: 'A full-stack web application built with Spring Boot (backend), React (frontend), and MongoDB (database). It enables efficient ' +
+          'mass communication through customizable email templates, secure user authentication, and real-time delivery tracking.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-weather-app.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/weather-dashboard', // Replace with actual GitHub URL
+      githubUrl: 'https://github.com/EmmanuelAdah/email_sender_backend',
       technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
       category: 'frontend',
       techIcons: [FaReact, FaJs]
@@ -136,6 +142,7 @@ function Projects() {
               
               <div className="project-content">
                 <h3>{project.title}</h3>
+                <br/>
                 <p>{project.description}</p>
                 
                 <div className="project-technologies">
