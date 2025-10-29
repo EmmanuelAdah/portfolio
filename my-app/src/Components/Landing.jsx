@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaDownload, FaWhatsapp } from 'react-icons/fa'
-import profileImg from '../assets/Images/profile.jpg'
+
 
 function Landing() {
+  const [showInput, setShowInput] = useState(false);
+
+  let profileImg = 'https://res.cloudinary.com/dg5fkl4xf/image/upload/IMG20250519131154_ck16ot.jpg'
+
   const handleDownloadCV = () => {
     const link = document.createElement('a')
     link.href = '/assets/CV.pdf'
@@ -27,6 +31,35 @@ function Landing() {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
+
+  const toggleInputVisibility = () => {
+    setShowInput(prev => !prev);
+  };
+
+  const preset = import.meta.env.VITE_PRESET
+  const cloudName = import.meta.env.VITE_CLOUD_NAME
+  const URL = import.meta.env.VITE_IMAGE_UPLOAD_URL
+
+  const handleUploadFile = async (event) => {
+    event.preventDefault();
+    const file = event.target.file.files[0];
+    console.log(file)
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', preset);
+    formData.append('cloud_name', cloudName);
+
+    await fetch(URL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+       data.url && (profileImg = data.url)
+    })
+    .catch(err => console.log(err))
+  };
 
   return (
     <section id="home" className="landing">
@@ -85,7 +118,45 @@ function Landing() {
             <img src={profileImg} alt="Profile" />
           </motion.div>
         </div>
+         <div style={{ position: 'relative' }}>
+      <span
+        onClick={toggleInputVisibility}
+        style={{
+          width: '20px',
+          height: '20px',
+          backgroundColor: 'turquoise',
+          position: 'absolute',
+          borderRadius: '3px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          bottom: '-50px',
+          right: '-65px',
+          cursor: 'pointer'
+        }}
+      >
+        +
+      </span>
+
+      {showInput && (
+        <form onSubmit={ handleUploadFile }
+              style={{ marginTop: '60px' }}>
+          <input
+            className='upload-btn'
+            type='file'
+            name='file'
+            id='file'
+            accept='.jpg, .png'
+          />
+          <button className='upload-btn'
+                  type='submit'>
+            Upload
+          </button>
+        </form>
+      )}
+    </div>
       </div>
+
     </section>
   )
 }
