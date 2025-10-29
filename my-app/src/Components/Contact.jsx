@@ -29,28 +29,22 @@ function Contact() {
 
     try {
       const templateParams = {
-        to_name: 'Emmanuel Adah',
-        to_email: 'edogbanya02@gmail.com',
-        from_name: formData.name,
-        from_email: formData.email,
+        name: formData.name,
+        email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        reply_to: formData.email
       }
       const result = await emailjs.send(
         'service_06sa2jc',
-        'template_31e18jd',
+        'template_r1tqiyg',
         templateParams
       )
-
-      console.log('Email sent successfully:', result)
+      if (result) alert('Email sent successfully')
       setStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
       console.error('Email sending failed:', error);
       setStatus(`Failed to send email: ${error.text || 'Unknown error'}`);
-    } finally {
-      setIsLoading(false)
     }
   }
 
