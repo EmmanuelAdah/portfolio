@@ -6,7 +6,7 @@ import { FaDownload, FaWhatsapp } from 'react-icons/fa'
 function Landing() {
   const [showInput, setShowInput] = useState(false);
 
-  let profileImg = 'https://res.cloudinary.com/dg5fkl4xf/image/upload/IMG20250519131154_ck16ot.jpg'
+  let profileImg = import.meta.env.VITE_PROFILE_PIC
 
   const handleDownloadCV = () => {
     const link = document.createElement('a')
@@ -26,7 +26,8 @@ function Landing() {
   }
 
   const handleWhatsApp = () => {
-    const phoneNumber = '+2348160509785'
+    const phoneNumber = import.meta.env.VITE_PHONE_NUMBER
+    console.log(phoneNumber)
     const message = 'Hello! I saw your portfolio and would like to discuss a project.'
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -43,7 +44,6 @@ function Landing() {
   const handleUploadFile = async (event) => {
     event.preventDefault();
     const file = event.target.file.files[0];
-    console.log(file)
 
     const formData = new FormData();
     formData.append('file', file);
@@ -58,7 +58,7 @@ function Landing() {
     .then(data => {
        data.url && (profileImg = data.url)
     })
-    .catch(err => console.log(err))
+    .catch(err => alert(err.message));
   };
 
   return (
@@ -124,15 +124,14 @@ function Landing() {
         style={{
           width: '20px',
           height: '20px',
-          backgroundColor: 'turquoise',
+          backgroundColor: 'transparent',
           position: 'absolute',
           borderRadius: '3px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          bottom: '-50px',
-          right: '-65px',
-          cursor: 'pointer'
+          bottom: '-60px',
+          right: '-110px',
         }}
       >
         +
@@ -140,8 +139,22 @@ function Landing() {
 
       {showInput && (
         <form onSubmit={ handleUploadFile }
-              style={{ marginTop: '60px' }}>
+              style={{
+                width: '10%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems:'center',
+                position: 'relative',
+                gap: '5px'
+
+              }}>
           <input
+              style={{
+                fontSize: '14px',
+                borderRadius: '30px',
+                padding: '3px',
+                display: 'flex',
+              }}
             className='upload-btn'
             type='file'
             name='file'
@@ -149,9 +162,31 @@ function Landing() {
             accept='.jpg, .png'
           />
           <button className='upload-btn'
-                  type='submit'>
+                  type='submit'
+          style={{
+            width: '60px',
+          }}
+          >
             Upload
           </button>
+
+          <span
+        onClick={toggleInputVisibility}
+        style={{
+          width: '20px',
+          height: '20px',
+          backgroundColor: 'transparent',
+          position: 'absolute',
+          borderRadius: '3px',
+          display: 'flex',
+          alignItems: 'start',
+          justifyContent: 'center',
+          bottom: '0',
+          left: '0',
+        }}
+      >
+        -
+      </span>
         </form>
       )}
     </div>

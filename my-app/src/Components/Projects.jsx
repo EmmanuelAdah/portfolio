@@ -37,7 +37,9 @@ function Projects() {
     {
       id: 3,
       title: 'Portfolio Website',
-      description: 'Responsive portfolio website built with React and modern CSS animations. Features smooth scrolling, contact forms, and project showcase.',
+      description: 'Built with React, TailwindCSS, and Framer Motion. This web application delivers a responsive,' +
+          ' visually engaging user experience. It combines modern UI design with smooth animations and scalable ' +
+          'architecture to ensure performance and interactivity across devices.',
       image: '/api/placeholder/400/250', // Replace with actual image
       liveUrl: 'https://your-portfolio-project.vercel.app', // Replace with actual Vercel URL
       githubUrl: 'https://github.com/EmmanuelAdah/portfolio', // Replace with actual GitHub URL
