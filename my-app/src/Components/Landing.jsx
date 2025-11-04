@@ -7,27 +7,28 @@ function Landing() {
   const [showInput, setShowInput] = useState(false);
 
   let profileImg = import.meta.env.VITE_PROFILE_PIC
+  const my_cv = import.meta.env.VITE_CV
 
   const handleDownloadCV = () => {
     const link = document.createElement('a')
-    link.href = '/assets/CV.pdf'
+    link.href = my_cv
     link.download = 'Emmanuel_CV.pdf'
     link.click()
 
     link.onerror = () => {
-      alert('CV file not found. Please add your CV.pdf file to the public/assets folder.')
+      alert('CV file not found. Please add your file.')
     }
   }
 
   const handleHireMe = () => {
-    const subject = 'Hiring Inquiry - Project Discussion'
-    const body = 'Hello Emmanuel Adah,\n\nI saw your portfolio and would like to discuss a potential project opportunity with you.\n\nPlease let me know your availability for a call.\n\nBest regards'
-    window.location.href = `mailto:edogbanya02@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   const handleWhatsApp = () => {
     const phoneNumber = import.meta.env.VITE_PHONE_NUMBER
-    console.log(phoneNumber)
     const message = 'Hello! I saw your portfolio and would like to discuss a project.'
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
