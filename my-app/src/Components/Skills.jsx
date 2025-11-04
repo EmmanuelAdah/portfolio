@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaReact, FaGitAlt, FaDatabase, FaJava } from 'react-icons/fa'
-import { SiDjango, SiMongodb, SiTailwindcss } from 'react-icons/si'
+import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaReact, FaGitAlt, FaDatabase, FaJava, FaNodeJs } from 'react-icons/fa'
+import {SiDjango, SiMongodb, SiPostgresql, SiTailwindcss} from 'react-icons/si'
 
 function Skills() {
 
@@ -10,14 +10,15 @@ function Skills() {
     { name: 'CSS3', icon: FaCss3Alt, level: 80, color: '#1572B6' },
     { name: 'JavaScript', icon: FaJs, level: 88, color: '#F7DF1E' },
     { name: 'React', icon: FaReact, level: 85, color: '#61DAFB' },
-    // { name: 'Node.js', icon: FaNodeJs, level: 80, color: '#339933' },
-    {name: 'Java', icon: FaJava, level: 90, color: '#F80000' },
+    { name: 'Node.js', icon: FaNodeJs, level: 80, color: '#3776AB' },
+    {name: 'Java', icon: FaJava, level: 89, color: '#F80000' },
     {name: 'Git', icon: FaGitAlt, level: 90, color: '#F05032' },
     {name: 'MySQL', icon: FaDatabase, level: 80, color: '#4479A1'},
     { name: 'Python', icon: FaPython, level: 75, color: '#3776AB' },
     // { name: 'Django', icon: SiDjango, level: 70, color: '#092E20' },
     { name: 'MongoDB', icon: SiMongodb, level: 75, color: '#47A248' },
-    {name: 'Tailwindcss', icon: SiTailwindcss, level: 80, color: '#1572B6'}
+    {name: 'Tailwindcss', icon: SiTailwindcss, level: 70, color: '#1b0f62'},
+    {name: 'PostgreSQL', icon: SiPostgresql, level: 60, color: '#14629b'}
   ]
 
   return (
@@ -77,9 +78,11 @@ function Skills() {
 
             <h3>Technical Expertise</h3>
             <p>
-              I have hands-on experience with modern web development technologies, building functional and
-              scalable full-stack applications that prioritize user experience. My expertise spans frontend
-              frameworks like React and backend technologies including Node.js, Java (Spring Boot).
+              Experienced in modern web development with a strong focus on building scalable,
+              user-centric full-stack applications. Proficient in frontend technologies such
+              as React, HTML, and CSS, complemented by backend expertise in Node.js and Java
+              (Spring Boot). Demonstrated ability to deliver robust solutions that enhance
+              performance, maintainability, and user engagement.
             </p>
             <div className="expertise-categories">
               <div className="category">

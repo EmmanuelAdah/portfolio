@@ -1,8 +1,23 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs, FaJava, FaDatabase } from 'react-icons/fa'
+import {
+  FaExternalLinkAlt,
+  FaGithub,
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaJs,
+  FaJava,
+  FaDatabase,
+  FaHtml5, FaCss3Alt
+} from 'react-icons/fa'
 import { SiMongodb, SiExpress, SiDjango, SiTailwindcss } from 'react-icons/si'
-import { AiFillSkype } from "react-icons/ai";
+import { AiFillSkype, AiOutlineSkype } from "react-icons/ai";
+import Portfolio from '../assets/Images/portfolio.png'
+import BulkEmails from '../assets/Images/bulk_emails.png'
+import ExpenseTracker from '../assets/Images/expense_tracker.png'
+import Note from '../assets/Images/note.png'
+
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -10,29 +25,29 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Library Management System',
-      description: 'Full-stack library manager that enhances learning with audio, video, and text books. Built with React frontend, ' +
-          'spring-boot backend, and MongoDB database. Features include user authentication & authorization, payment integration for' +
-          ' book access, and earning of commissions for added values by users.',
-      image: '/api/placeholder/400/250', // Replace with actual image
-      liveUrl: 'https://your-ecommerce-project.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/ecommerce-project', // Replace with actual GitHub URL
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      category: 'fullstack',
-      techIcons: [FaReact, FaJava, SiMongodb]
-    },
-    {
-      id: 2,
       title: 'Expense Tracker App',
       description: 'A full-stack expense tracker built with React (frontend), Spring Boot (backend), and PostgreSQL. ' +
           'It enables users to record, categorize, and visualize their spending through intuitive dashboards and RESTful APIs. ' +
           'Features include secure authentication, real-time budget insights, and responsive design for seamless cross-device access.',
-      image: '/api/placeholder/400/250', // Replace with actual image
+      image: ExpenseTracker, // Replace with actual image
       liveUrl: 'https://your-taskmanager-project.vercel.app', // Replace with actual Vercel URL
       githubUrl: 'https://github.com/EmmanuelAdah/expense_tracker__backend', // Replace with actual GitHub URL
       technologies: ['Java(Spring Boot)', 'React', 'PostgreSQL'],
       category: 'fullstack',
       techIcons: [FaReact, FaJava, SiTailwindcss, FaDatabase]
+    },
+      {
+      id: 2,
+      title: 'Note Management System',
+      description: 'A simple and efficient Note Management System built with Spring Boot for the backend ' +
+          'and JavaScript, HTML, and CSS for the frontend. It allows users to create, edit, delete, and ' +
+          'organize notes seamlessly with a responsive and user-friendly interface.',
+      image: Note, // Replace with actual image
+      liveUrl: 'https://your-ecommerce-project.vercel.app', // Replace with actual Vercel URL
+      githubUrl: 'https://github.com/EmmanuelAdah/note_management_system__Backend', // Replace with actual GitHub URL
+      technologies: ['SpringBoot', 'Javascript', 'HTML', 'CSS', 'MongoDB'],
+      category: 'fullstack',
+      techIcons: [FaJava, FaJs, FaHtml5, FaCss3Alt, SiMongodb]
     },
     {
       id: 3,
@@ -40,7 +55,7 @@ function Projects() {
       description: 'Built with React, TailwindCSS, and Framer Motion. This web application delivers a responsive,' +
           ' visually engaging user experience. It combines modern UI design with smooth animations and scalable ' +
           'architecture to ensure performance and interactivity across devices.',
-      image: '/api/placeholder/400/250', // Replace with actual image
+      image: `${Portfolio}`, // Replace with actual image
       liveUrl: 'https://your-portfolio-project.vercel.app', // Replace with actual Vercel URL
       githubUrl: 'https://github.com/EmmanuelAdah/portfolio', // Replace with actual GitHub URL
       technologies: ['React', 'JavaScript', 'CSS3', 'Framer Motion'],
@@ -52,8 +67,8 @@ function Projects() {
       title: 'Bulk Email Sender',
       description: 'A full-stack web application built with Spring Boot (backend), React (frontend), and MongoDB (database). It enables efficient ' +
           'mass communication through customizable email templates, secure user authentication, and real-time delivery tracking.',
-      image: '/api/placeholder/400/250', // Replace with actual image
-      liveUrl: 'https://your-weather-app.vercel.app', // Replace with actual Vercel URL
+      image: `${BulkEmails}`,
+      liveUrl: 'https://your-weather-app.vercel.app',
       githubUrl: 'https://github.com/EmmanuelAdah/email_sender_backend',
       technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
       category: 'frontend',
@@ -170,8 +185,7 @@ function Projects() {
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <h3>Interested in My Work?</h3>
-          <p>Check out more of my projects on GitHub or get in touch to discuss your next project.</p>
+          <p>Check out for more projects on GitHub.</p>
           <div className="cta-buttons">
             <motion.a 
               href="https://github.com/EmmanuelAdah"
@@ -183,19 +197,7 @@ function Projects() {
             >
               <FaGithub /> View GitHub
             </motion.a>
-            <motion.button 
-              className="cta-button primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const phoneNumber = '+2348068853611'
-                const message = 'Hello! I saw your projects and would like to discuss working together.'
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-                window.open(whatsappUrl, '_blank')
-              }}
-            >
-              Let's Work Together
-            </motion.button>
+
           </div>
         </motion.div>
       </div>
