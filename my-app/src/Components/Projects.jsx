@@ -1,11 +1,23 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaExternalLinkAlt, FaGithub, FaReact, FaNodeJs, FaPython, FaJs, FaJava, FaDatabase } from 'react-icons/fa'
+import {
+  FaExternalLinkAlt,
+  FaGithub,
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaJs,
+  FaJava,
+  FaDatabase,
+  FaHtml5, FaCss3Alt
+} from 'react-icons/fa'
 import { SiMongodb, SiExpress, SiDjango, SiTailwindcss } from 'react-icons/si'
 import { AiFillSkype, AiOutlineSkype } from "react-icons/ai";
 import Portfolio from '../assets/Images/portfolio.png'
 import BulkEmails from '../assets/Images/bulk_emails.png'
 import ExpenseTracker from '../assets/Images/expense_tracker.png'
+import Note from '../assets/Images/note.png'
+
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -13,19 +25,6 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Library Management System',
-      description: 'Full-stack library manager that enhances learning with audio, video, and text books. Built with React frontend, ' +
-          'spring-boot backend, and MongoDB database. Features include user authentication & authorization, payment integration for' +
-          ' book access, and earning of commissions for added values by users.',
-      image: ExpenseTracker, // Replace with actual image
-      liveUrl: 'https://your-ecommerce-project.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/yourusername/ecommerce-project', // Replace with actual GitHub URL
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      category: 'fullstack',
-      techIcons: [FaReact, FaJava, SiMongodb]
-    },
-    {
-      id: 2,
       title: 'Expense Tracker App',
       description: 'A full-stack expense tracker built with React (frontend), Spring Boot (backend), and PostgreSQL. ' +
           'It enables users to record, categorize, and visualize their spending through intuitive dashboards and RESTful APIs. ' +
@@ -36,6 +35,19 @@ function Projects() {
       technologies: ['Java(Spring Boot)', 'React', 'PostgreSQL'],
       category: 'fullstack',
       techIcons: [FaReact, FaJava, SiTailwindcss, FaDatabase]
+    },
+      {
+      id: 2,
+      title: 'Note Management System',
+      description: 'A simple and efficient Note Management System built with Spring Boot for the backend ' +
+          'and JavaScript, HTML, and CSS for the frontend. It allows users to create, edit, delete, and ' +
+          'organize notes seamlessly with a responsive and user-friendly interface.',
+      image: Note, // Replace with actual image
+      liveUrl: 'https://your-ecommerce-project.vercel.app', // Replace with actual Vercel URL
+      githubUrl: 'https://github.com/EmmanuelAdah/note_management_system__Backend', // Replace with actual GitHub URL
+      technologies: ['SpringBoot', 'Javascript', 'HTML', 'CSS', 'MongoDB'],
+      category: 'fullstack',
+      techIcons: [FaJava, FaJs, FaHtml5, FaCss3Alt, SiMongodb]
     },
     {
       id: 3,
