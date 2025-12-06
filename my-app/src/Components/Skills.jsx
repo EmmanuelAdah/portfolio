@@ -1,21 +1,32 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaReact, FaGitAlt, FaDatabase, FaJava, FaNodeJs } from 'react-icons/fa'
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaPython,
+  FaReact,
+  FaGitAlt,
+  FaDatabase,
+  FaJava,
+  FaNodeJs,
+  FaDocker
+} from 'react-icons/fa'
 import {SiDjango, SiMongodb, SiPostgresql, SiTailwindcss} from 'react-icons/si'
 
 function Skills() {
 
   const skills = [
+    {name: 'Java', icon: FaJava, level: 89, color: '#F80000' },
+    { name: 'Node.js', icon: FaNodeJs, level: 80, color: '#3776AB' },
+    { name: 'React', icon: FaReact, level: 85, color: '#272769' },
+    { name: 'JavaScript', icon: FaJs, level: 88, color: '#F7DF1E' },
     { name: 'HTML5', icon: FaHtml5, level: 70, color: '#E34F26' },
     { name: 'CSS3', icon: FaCss3Alt, level: 80, color: '#1572B6' },
-    { name: 'JavaScript', icon: FaJs, level: 88, color: '#F7DF1E' },
-    { name: 'React', icon: FaReact, level: 85, color: '#61DAFB' },
-    { name: 'Node.js', icon: FaNodeJs, level: 80, color: '#3776AB' },
-    {name: 'Java', icon: FaJava, level: 89, color: '#F80000' },
     {name: 'Git', icon: FaGitAlt, level: 90, color: '#F05032' },
     {name: 'MySQL', icon: FaDatabase, level: 80, color: '#4479A1'},
-    { name: 'Python', icon: FaPython, level: 75, color: '#3776AB' },
-    // { name: 'Django', icon: SiDjango, level: 70, color: '#092E20' },
+    { name: 'Python', icon: FaPython, level: 75, color: '#45456d' },
+    { name: 'Docker', icon: FaDocker, level: 72, color: '#5b5bb4' },
     { name: 'MongoDB', icon: SiMongodb, level: 75, color: '#47A248' },
     {name: 'Tailwindcss', icon: SiTailwindcss, level: 70, color: '#1b0f62'},
     {name: 'PostgreSQL', icon: SiPostgresql, level: 60, color: '#14629b'}
