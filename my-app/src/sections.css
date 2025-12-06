@@ -461,7 +461,7 @@
 
 /* Contact Section */
 .contact {
-  padding: 6rem 0;
+  padding: 4rem 0;
   background: linear-gradient(135deg, #668970 0%, #9c9cb9 100%);
   color: white;
   position: relative;
@@ -587,11 +587,18 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-xl);
 }
-
+.contact-form h3 {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-family: BlinkMacSystemFont;
+  align-self: center;
+  padding-left: 10px;
+}
 .form-group {
   margin-bottom: 2rem;
 }
@@ -599,11 +606,11 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1.25rem;
+  padding: 1rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--border-radius);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: var(--transition);
   background: rgba(255, 255, 255, 0.1);
   color: white;
