@@ -76,7 +76,7 @@ function Contact() {
     {
       icon: FaLinkedin,
       name: 'LinkedIn',
-      url: 'www.linkedin.com/in/emmanuel-adah-767792312',
+      url: 'https://www.linkedin.com/in/emmanuel-adah-767792312',
       color: '#0077B5'
     },
     {
