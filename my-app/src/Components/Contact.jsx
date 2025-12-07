@@ -117,9 +117,9 @@ function Contact() {
           >
             <h3>Let's talk about everything!</h3>
             <p>
-              Don't hesitate to reach out to me! Whether you have a project in mind, 
-              need technical consultation, or just want to say hello, I'm always excited 
-              to connect with new people and discuss opportunities.
+              Don't hesitate to reach out to me! Whether you have a project in mind to work on,
+              need technical consultation, or just want to say 'Hi', I'm always delighted
+              to connect with people and promote innovations or discuss opportunities.
             </p>
             
             <div className="contact-details">
@@ -182,6 +182,7 @@ function Contact() {
             viewport={{ once: true }}
           >
             <form onSubmit={handleSubmit}>
+              <h3>Leave a message</h3>
               <div className="form-group">
                 <input
                   type="text"
