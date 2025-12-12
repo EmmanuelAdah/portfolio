@@ -35,7 +35,7 @@ function About() {
             </p>
             <p>
               Inspired by Alan Kay’s belief that 'the best way to predict the future is to
-              invent it,' I ventured into software engineering driven by a deep curiosity
+              invent it'. I ventured into software engineering driven by a deep curiosity
               about technology’s power to transform lives. I now channel that drive into
               writing clean, efficient code and staying ahead of emerging trends. I’m
               committed to continuous learning and building solutions that not only solve
