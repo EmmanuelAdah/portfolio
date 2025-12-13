@@ -267,6 +267,11 @@ p {
   50% { transform: translateY(-20px); }
 }
 
+@media body{
+  --container-max-width: 1200px;
+  width: 100%;
+}
+
 .landing-container {
   max-width: var(--max-width);
   margin: 0 auto;
