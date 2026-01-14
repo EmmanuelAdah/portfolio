@@ -39,9 +39,16 @@ function Contact() {
         'template_r1tqiyg',
         templateParams
       )
-      if (result) alert('Email sent successfully')
+      if (result)
+        alert('Email sent successfully')
+
       setStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
     } catch (error) {
       console.error('Email sending failed:', error);
       setStatus(`Failed to send email: ${error.text || 'Unknown error'}`);
