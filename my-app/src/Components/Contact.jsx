@@ -39,9 +39,16 @@ function Contact() {
         'template_r1tqiyg',
         templateParams
       )
-      if (result) alert('Email sent successfully')
+      if (result)
+        alert('Email sent successfully')
+
       setStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
     } catch (error) {
       console.error('Email sending failed:', error);
       setStatus(`Failed to send email: ${error.text || 'Unknown error'}`);
@@ -117,7 +124,7 @@ function Contact() {
           >
             <h3>Let's talk about everything!</h3>
             <p>
-              Don't hesitate to reach out to me! Whether you have a project in mind to work on,
+              Don't hesitate to reach out to me! If you have a project in mind to work on,
               need technical consultation, or just want to say 'Hi', I'm always delighted
               to connect with people and promote innovations or discuss opportunities.
             </p>

@@ -98,6 +98,8 @@
   padding: 6rem 0;
   background: white;
   position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
 }
 
 .skills::before {
@@ -357,7 +359,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 3fr));
   gap: 2rem;
   margin-bottom: 4rem;
 }
