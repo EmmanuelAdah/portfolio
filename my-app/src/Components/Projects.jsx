@@ -37,7 +37,7 @@ function Projects() {
       githubUrl: '#',
       technologies: ['React', 'Next.js', 'Node.js', 'MongoDB'],
       category: 'frontend',
-      techIcons: [FaReact, SiNodedotjs, SiNextdotjs, SiTailwindcss]
+      techIcons: [FaReact, SiNodedotjs, SiNextdotjs, SiTailwindcss, SiMongodb]
     },
     {
       id: 2,
