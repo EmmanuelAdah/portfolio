@@ -95,7 +95,7 @@ function Contact() {
     {
       icon: FaTwitter,
       name: 'Twitter / X',
-      url: 'https://x.com/mac_winner',
+      url: 'https://x.com/EdogbanyaE87359',
       color: '#1DA1F2'
     }
   ]

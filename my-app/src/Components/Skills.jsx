@@ -12,7 +12,7 @@ import {
   FaNodeJs,
   FaDocker
 } from 'react-icons/fa'
-import {SiDjango, SiMongodb, SiPostgresql, SiTailwindcss} from 'react-icons/si'
+import {SiDjango, SiMongodb, SiPostgresql, SiTailwindcss, SiTypescript} from 'react-icons/si'
 
 function Skills() {
 
@@ -21,6 +21,7 @@ function Skills() {
     { name: 'Node.js', icon: FaNodeJs, level: 80, color: '#3776AB' },
     { name: 'React', icon: FaReact, level: 85, color: '#272769' },
     { name: 'JavaScript', icon: FaJs, level: 88, color: '#F7DF1E' },
+    { name: 'TypeScript', icon: SiTypescript, level: 72, color: '#1e9df7' },
     { name: 'HTML5', icon: FaHtml5, level: 70, color: '#E34F26' },
     { name: 'CSS3', icon: FaCss3Alt, level: 80, color: '#1572B6' },
     {name: 'Git', icon: FaGitAlt, level: 90, color: '#F05032' },
