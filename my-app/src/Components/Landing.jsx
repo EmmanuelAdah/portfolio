@@ -120,23 +120,23 @@ function Landing() {
           </motion.div>
         </div>
          <div style={{ position: 'relative' }}>
-      <span
-        onClick={toggleInputVisibility}
-        style={{
-          width: '20px',
-          height: '20px',
-          backgroundColor: 'transparent',
-          position: 'absolute',
-          borderRadius: '3px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          bottom: '-60px',
-          right: '-110px',
-        }}
-      >
-        +
-      </span>
+      {/*<span*/}
+      {/*  onClick={toggleInputVisibility}*/}
+      {/*  style={{*/}
+      {/*    width: '20px',*/}
+      {/*    height: '20px',*/}
+      {/*    backgroundColor: 'transparent',*/}
+      {/*    position: 'absolute',*/}
+      {/*    borderRadius: '3px',*/}
+      {/*    display: 'flex',*/}
+      {/*    alignItems: 'center',*/}
+      {/*    justifyContent: 'center',*/}
+      {/*    bottom: '-60px',*/}
+      {/*    right: '-110px',*/}
+      {/*  }}*/}
+      {/*>*/}
+      {/*  +*/}
+      {/*</span>*/}
 
       {showInput && (
         <form onSubmit={ handleUploadFile }
@@ -149,27 +149,27 @@ function Landing() {
                 gap: '5px'
 
               }}>
-          <input
-              style={{
-                fontSize: '14px',
-                borderRadius: '30px',
-                padding: '3px',
-                display: 'flex',
-              }}
-            className='upload-btn'
-            type='file'
-            name='file'
-            id='file'
-            accept='.jpg, .png'
-          />
-          <button className='upload-btn'
-                  type='submit'
-          style={{
-            width: '60px',
-          }}
-          >
-            Upload
-          </button>
+          {/*<input*/}
+          {/*    style={{*/}
+          {/*      fontSize: '14px',*/}
+          {/*      borderRadius: '30px',*/}
+          {/*      padding: '3px',*/}
+          {/*      display: 'flex',*/}
+          {/*    }}*/}
+          {/*  className='upload-btn'*/}
+          {/*  type='file'*/}
+          {/*  name='file'*/}
+          {/*  id='file'*/}
+          {/*  accept='.jpg, .png'*/}
+          {/*/>*/}
+          {/*<button className='upload-btn'*/}
+          {/*        type='submit'*/}
+          {/*style={{*/}
+          {/*  width: '60px',*/}
+          {/*}}*/}
+          {/*>*/}
+          {/*  Upload*/}
+          {/*</button>*/}
 
           <span
         onClick={toggleInputVisibility}
