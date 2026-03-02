@@ -33,7 +33,7 @@ function Projects() {
           'operations such as orders, shipments, and customer records through a simple and intuitive user interface. ' +
           'The application is built using modern web technologies, including React, Next.js, Node.js, MongoDB, and Tailwind CSS.',
       image: `${Logistics}`,
-      liveUrl: 'https://yspace-app.vercel.app/',
+      liveUrl: 'https://y-space-frontend.vercel.app/',
       githubUrl: '#',
       technologies: ['React', 'Next.js', 'Node.js', 'MongoDB'],
       category: 'frontend',
