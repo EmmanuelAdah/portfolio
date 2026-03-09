@@ -1,3 +1,4 @@
+
 /* About Section */
 .about {
   padding: 6rem 0;
@@ -123,12 +124,12 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
 }
 
 .skills .skill-item {
-  padding: 2.5rem;
+  padding: 1rem;
   background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
   border-radius: var(--border-radius);
   text-align: center;

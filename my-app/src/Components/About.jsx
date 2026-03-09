@@ -1,6 +1,34 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaCode, FaLaptopCode, FaMobile, FaDatabase } from 'react-icons/fa'
+import {FaCode, FaLaptopCode, FaMobile, FaDatabase, FaJava, FaReact, FaCloud, FaDeviantart} from 'react-icons/fa'
+
+const experties = [
+    {
+      name: 'Frontend Development',
+      responsibility: 'Creating responsive and interactive user interfaces',
+      icon: FaReact
+    },
+    {
+      name: 'Backend Development',
+      responsibility: 'Building robust server-side applications and APIs',
+      icon: FaLaptopCode
+    },
+    {
+      name: 'Database Design',
+      responsibility: 'Designing efficient database structures and queries',
+      icon: FaDatabase
+    },
+    {
+      name: 'Cloud Computing',
+      responsibility: 'Designing, building, and maintaining cloud infrastructures.',
+      icon: FaCloud
+    },
+    {
+      name: 'DevOps',
+      responsibility: 'Streamlining CI/CD pipelines and automating deployment processes.',
+      icon: FaDeviantart
+    },
+]
 
 function About() {
   return (
@@ -65,26 +93,17 @@ function About() {
             <h4 style={{marginLeft: '20px'}}>What I Do</h4>
             <br/>
             <div className="skills-preview-grid">
-              <div className="skill-item">
-                <FaCode className="skill-icon" />
-                <h4>Frontend Development</h4>
-                <p>Creating responsive and interactive user interfaces</p>
-              </div>
-              <div className="skill-item">
-                <FaLaptopCode className="skill-icon" />
-                <h4>Backend Development</h4>
-                <p>Building robust server-side applications and APIs</p>
-              </div>
-              <div className="skill-item">
-                <FaDatabase className="skill-icon" />
-                <h4>Database Design</h4>
-                <p>Designing efficient database structures and queries</p>
-              </div>
-              <div className="skill-item">
-                <FaMobile className="skill-icon" />
-                <h4>Mobile Development</h4>
-                <p>Creating mobile-friendly applications and PWAs</p>
-              </div>
+              {experties.map((skill, index) => {
+                const Icon = skill.icon
+
+                return(
+                    <div className="skill-item">
+                      <Icon className="skill-icon" />
+                      <h4>{skill.name}</h4>
+                      <p>{skill.responsibility}</p>
+                    </div>
+                )
+              })}
             </div>
           </motion.div>
         </div>
