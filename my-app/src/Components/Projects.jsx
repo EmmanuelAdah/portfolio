@@ -11,7 +11,17 @@ import {
   FaDatabase,
   FaHtml5, FaCss3Alt, FaCss3, FaNode
 } from 'react-icons/fa'
-import {SiMongodb, SiExpress, SiDjango, SiTailwindcss, SiNextdotjs, SiNodedotjs} from 'react-icons/si'
+import {
+  SiMongodb,
+  SiExpress,
+  SiDjango,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiRedis,
+  SiRabbitmq, SiGoogleauthenticator
+} from 'react-icons/si'
 import { AiFillSkype, AiOutlineSkype } from "react-icons/ai";
 import ECommerceApp from '../assets/Images/e_commerce_app.png'
 import Portfolio from '../assets/Images/portfolio.png'
@@ -33,14 +43,26 @@ function Projects() {
           'operations such as orders, shipments, and customer records through a simple and intuitive user interface. ' +
           'The application is built using modern web technologies, including React, Next.js, Node.js, MongoDB, and Tailwind CSS.',
       image: `${Logistics}`,
-      liveUrl: 'https://yspace-app.vercel.app/',
+      liveUrl: 'https://yspace-frontend-update.vercel.app/',
       githubUrl: '#',
       technologies: ['React', 'Next.js', 'Node.js', 'MongoDB'],
       category: 'frontend',
       techIcons: [FaReact, SiNodedotjs, SiNextdotjs, SiTailwindcss, SiMongodb]
     },
-    {
+      {
       id: 2,
+      title: 'Mentor Growth',
+      description: 'A full-stack web application built with Spring Boot (backend), React (frontend), and MongoDB (database). It enables efficient ' +
+          'mass communication through customizable email templates, secure user authentication, and real-time delivery tracking.',
+      image: `${BulkEmails}`,
+      liveUrl: 'https://your-weather-app.vercel.app',
+      githubUrl: 'https://github.com/EmmanuelAdah/mentor_growth_project.git',
+      technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
+      category: 'frontend',
+      techIcons: [FaJava, SiPostgresql, SiRedis, SiGoogleauthenticator,SiRabbitmq]
+    },
+    {
+      id: 3,
       title: 'E_Commerce App',
       description: 'A lightweight e-commerce platform built with Node.js, Express.js, and vanilla HTML, CSS, and JavaScript, designed ' +
           'for fast and seamless shopping experiences. It features efficient product management, cart handling, and secure order processing, ' +
@@ -53,7 +75,7 @@ function Projects() {
       techIcons: [FaNodeJs, SiExpress, FaJs, FaHtml5, FaCss3, SiMongodb]
     },
       {
-      id: 3,
+      id: 4,
       title: 'Portfolio Website',
       description: 'Built with React, TailwindCSS, and Framer Motion. This web application delivers a responsive,' +
           ' visually engaging user experience. It combines modern UI design with smooth animations and scalable ' +
@@ -64,19 +86,6 @@ function Projects() {
       technologies: ['React', 'JavaScript', 'CSS3', 'Framer Motion'],
       category: 'frontend',
       techIcons: [FaReact, FaJs, SiTailwindcss]
-    },
-    {
-      id: 4,
-      title: 'Expense Tracker App',
-      description: 'A full-stack expense tracker built with React (frontend), Spring Boot (backend), and PostgreSQL. ' +
-          'It enables users to record, categorize, and visualize their spending through intuitive dashboards and RESTful APIs. ' +
-          'Features include secure authentication, real-time budget insights, and responsive design for seamless cross-device access.',
-      image: ExpenseTracker,
-      liveUrl: 'https://your-taskmanager-project.vercel.app', // Replace with actual Vercel URL
-      githubUrl: 'https://github.com/EmmanuelAdah/expense_tracker__backend', // Replace with actual GitHub URL
-      technologies: ['Java(Spring Boot)', 'React', 'PostgreSQL'],
-      category: 'fullstack',
-      techIcons: [FaReact, FaJava, SiTailwindcss, FaDatabase]
     },
     {
       id: 5,
@@ -91,18 +100,6 @@ function Projects() {
       technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
       category: 'frontend',
       techIcons: [FaNodeJs, SiExpress, FaJs, FaHtml5, FaCss3, SiMongodb]
-    },
-    {
-      id: 6,
-      title: 'Bulk Email Sender',
-      description: 'A full-stack web application built with Spring Boot (backend), React (frontend), and MongoDB (database). It enables efficient ' +
-          'mass communication through customizable email templates, secure user authentication, and real-time delivery tracking.',
-      image: `${BulkEmails}`,
-      liveUrl: 'https://your-weather-app.vercel.app',
-      githubUrl: 'https://github.com/EmmanuelAdah/email_sender_backend',
-      technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
-      category: 'frontend',
-      techIcons: [FaReact, FaJs]
     }
   ]
 
