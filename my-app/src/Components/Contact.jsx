@@ -35,8 +35,8 @@ function Contact() {
         message: formData.message,
       }
       const result = await emailjs.send(
-        'service_06sa2jc',
-        'template_r1tqiyg',
+        `${import.meta.env.VITE_SERVICE_ID}`,
+        `${import.meta.env.VITE_TEMPLATE_ID}`,
         templateParams
       )
       if (result)

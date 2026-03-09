@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import {FaCode, FaLaptopCode, FaMobile, FaDatabase, FaJava, FaReact, FaCloud, FaDeviantart} from 'react-icons/fa'
+import {FaCode, FaLaptopCode, FaMobile, FaDatabase, FaJava, FaReact, FaCloud, FaCogs} from 'react-icons/fa'
 
 const experties = [
     {
@@ -26,7 +26,7 @@ const experties = [
     {
       name: 'DevOps',
       responsibility: 'Streamlining CI/CD pipelines and automating deployment processes.',
-      icon: FaDeviantart
+      icon: FaCogs
     },
 ]
 
