@@ -20,7 +20,7 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiRedis,
-  SiRabbitmq, SiGoogleauthenticator
+  SiRabbitmq, SiGoogleauthenticator, SiPayhip
 } from 'react-icons/si'
 import { AiFillSkype, AiOutlineSkype } from "react-icons/ai";
 import ECommerceApp from '../assets/Images/e_commerce_app.png'
@@ -52,14 +52,14 @@ function Projects() {
       {
       id: 2,
       title: 'Mentor Growth',
-      description: 'A full-stack web application built with Spring Boot (backend), React (frontend), and MongoDB (database). It enables efficient ' +
-          'mass communication through customizable email templates, secure user authentication, and real-time delivery tracking.',
+      description: 'A full-stack mentorship platform built with Spring Boot, React, and PostgreSQL that facilitates mentor–mentee ' +
+          'collaboration, secure user authentication, program management, and real-time interaction between participants.',
       image: `${BulkEmails}`,
       liveUrl: 'https://your-weather-app.vercel.app',
       githubUrl: 'https://github.com/EmmanuelAdah/mentor_growth_project.git',
-      technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
+      technologies: ['Spring Boot', 'React', 'Event-Streaming', 'API Integration', 'Payment Gateway integration', 'WebSocket'],
       category: 'frontend',
-      techIcons: [FaJava, SiPostgresql, SiRedis, SiGoogleauthenticator,SiRabbitmq]
+      techIcons: [FaJava, SiPostgresql, SiRedis, SiGoogleauthenticator,SiRabbitmq, SiPayhip]
     },
     {
       id: 3,
