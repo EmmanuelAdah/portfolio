@@ -103,11 +103,12 @@ function Skills() {
 
             <h3>Technical Expertise</h3>
             <p>
-              Experienced in modern web development with a strong focus on building scalable,
-              user-centric full-stack applications. Proficient in frontend technologies such
-              as React, HTML, and CSS, complemented by backend expertise in Node.js and Java
-              (Spring Boot). Demonstrated ability to deliver robust solutions that enhance
-              performance, maintainability, and user engagement.
+              Experienced in modern software engineering with a strong focus on building scalable,
+              resilient, and cloud-ready full-stack applications. Proficient in developing responsive
+              user interfaces with React and modern web technologies, while designing robust backend
+              services using Java (Spring Boot), Node.js, and Python. Skilled in DevOps practices,
+              containerization, and cloud-based deployment, enabling reliable CI/CD pipelines, efficient
+              infrastructure management, and high-performance distributed systems.
             </p>
             <div className="expertise-categories">
               <div className="category">
@@ -120,11 +121,15 @@ function Skills() {
               </div>
               <div className="category">
                 <h4>Database</h4>
-                <p>MongoDB, PostgreSQL, MySQL</p>
+                <p>PostgreSQL, MongoDB, MySQL, Redis, Supabase</p>
+              </div>
+              <div className="category">
+                <h4>DevOps & Cloud Engineering</h4>
+                <p>Docker, Kubernetes, CI/CD (GitHub Actions), Containerized Deployments, Cloud-Ready Architecture</p>
               </div>
               <div className="category">
                 <h4>Tools</h4>
-                <p>Git, Postman, Docker, GitAction, </p>
+                <p>Git, GitHub, Postman, Kafka, RabbitMQ </p>
               </div>
             </div>
           </motion.div>
