@@ -117,7 +117,7 @@ function Skills() {
               </div>
               <div className="category">
                 <h4>Backend</h4>
-                <p>Java (Spring Boot), Python (Django), NodeJs (Express)</p>
+                <p>Java (Spring Boot), Python (FastAPI), NodeJs (Express)</p>
               </div>
               <div className="category">
                 <h4>Database</h4>
