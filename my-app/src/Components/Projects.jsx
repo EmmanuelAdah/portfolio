@@ -20,13 +20,15 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiRedis,
-  SiRabbitmq, SiGoogleauthenticator, SiPayhip
+  SiApachekafka,
+  SiRabbitmq, SiGoogleauthenticator, SiPayhip, SiSpringboot
 } from 'react-icons/si'
+import { MdPayments } from "react-icons/md";
 import { AiFillSkype, AiOutlineSkype } from "react-icons/ai";
 import ECommerceApp from '../assets/Images/e_commerce_app.png'
 import Portfolio from '../assets/Images/portfolio.png'
-import BulkEmails from '../assets/Images/bulk_emails.png'
-import SocialMediaApp from '../assets/Images/social_media_app.png'
+import MentorGrowth from '../assets/Images/Mentorship.jpeg'
+import AI_Fitness from '../assets/Images/ai-in-fitness.webp'
 import ExpenseTracker from '../assets/Images/expense_tracker.png'
 import Note from '../assets/Images/note.png'
 import Logistics from "../assets/Images/logistics.jpg";
@@ -51,35 +53,49 @@ function Projects() {
     },
       {
       id: 2,
+      title: 'AI Powered FitnessApp - Microservices',
+      description: 'An AI-powered fitness recommendation platform built with Spring Boot microservices, using RabbitMQ, Eureka, and ' +
+          'an API Gateway for scalable event-driven processing. Activity data from PostgreSQL and MongoDB is analyzed with the Gemini ' +
+          'API to generate personalized fitness insights in real time.',
+      image: `${AI_Fitness}`,
+      liveUrl: 'https://your-weather-app.vercel.app',
+      githubUrl: 'https://github.com/EmmanuelAdah/fitness-app-microservices.git',
+      technologies: ['Java', 'Spring Boot', 'Gen AI', 'Postgres', 'Mongo', 'Eureka', 'API Gateway'],
+      category: 'Backend',
+      techIcons: [FaJava, SiSpringboot, SiPostgresql, SiMongodb, SiGoogleauthenticator, SiRabbitmq, SiPayhip]
+    },
+    {
+      id: 3,
+      title: 'Pan Afric Store',
+      description: 'A high-performance cross-border e-commerce backend built with Express.js and PostgreSQL, designed for stable ' +
+          'international transactions. It supports automated currency sync, atomic checkout with exchange-rate locking, and secure ' +
+          'order processing. The system also includes modular product, cart, and order management, plus a merchant payout engine that ' +
+          'separates buyer payments from seller settlements to eliminate FX risk.',
+      image: ECommerceApp,
+      liveUrl: 'https://your-taskmanager-project.vercel.app',
+      githubUrl: 'https://github.com/EmmanuelAdah/PanAfrik_Store.git',
+      technologies: ['Node.js', 'JavaScript', 'Express', 'Redis', 'Postgres', 'Prisma (ORM)'],
+      category: 'Backend',
+      techIcons: [FaNodeJs, SiExpress, FaJs, SiPostgresql, SiRedis]
+    },
+      {
+      id: 4,
       title: 'Mentor Growth',
-      description: 'A full-stack mentorship platform built with Spring Boot, React, and PostgreSQL that facilitates mentor–mentee ' +
-          'collaboration, secure user authentication, program management, and real-time interaction between participants.',
-      image: `${BulkEmails}`,
+      description: 'A full-stack mentorship platform built with Spring Boot, React, PostgreSQL, Redis, and Apache Kafka, enabling ' +
+          'secure mentor–mentee collaboration, real-time interaction, program management, and scalable event-driven processing. ' +
+          'Integrated Paystack for secure payments and subscription handling.',
+      image: `${MentorGrowth}`,
       liveUrl: 'https://your-weather-app.vercel.app',
       githubUrl: 'https://github.com/EmmanuelAdah/mentor_growth_project.git',
       technologies: ['Spring Boot', 'React', 'Event-Streaming', 'API Integration', 'Payment Gateway integration', 'WebSocket'],
       category: 'frontend',
-      techIcons: [FaJava, SiPostgresql, SiRedis, SiGoogleauthenticator,SiRabbitmq, SiPayhip]
-    },
-    {
-      id: 3,
-      title: 'E_Commerce App',
-      description: 'A lightweight e-commerce platform built with Node.js, Express.js, and vanilla HTML, CSS, and JavaScript, designed ' +
-          'for fast and seamless shopping experiences. It features efficient product management, cart handling, and secure order processing, ' +
-          'with a responsive, intuitive frontend ideal for small to mid-scale stores seeking speed and flexibility.',
-      image: ECommerceApp,
-      liveUrl: 'https://your-taskmanager-project.vercel.app',
-      githubUrl: 'https://github.com/EmmanuelAdah/CodeAlpha_simple_e_commerce_store',
-      technologies: ['Node.js', 'JavaScript', 'HTML', 'CSS', 'Mongoose'],
-      category: 'fullstack',
-      techIcons: [FaNodeJs, SiExpress, FaJs, FaHtml5, FaCss3, SiMongodb]
+      techIcons: [FaJava, SiSpringboot, SiPostgresql, SiRedis, SiGoogleauthenticator,SiApachekafka, MdPayments]
     },
       {
-      id: 4,
+      id: 5,
       title: 'Portfolio Website',
-      description: 'Built with React, TailwindCSS, and Framer Motion. This web application delivers a responsive,' +
-          ' visually engaging user experience. It combines modern UI design with smooth animations and scalable ' +
-          'architecture to ensure performance and interactivity across devices.',
+      description: 'Built with React, Tailwind CSS, and Framer Motion, this portfolio application delivers a responsive and visually ' +
+          'engaging user experience with modern UI design, smooth animations, and scalable frontend architecture across devices.',
       image: `${Portfolio}`,
       liveUrl: 'https://portfolio-git-main-emmanuel-adahs-projects.vercel.app/',
       githubUrl: 'https://github.com/EmmanuelAdah/portfolio',
@@ -87,20 +103,6 @@ function Projects() {
       category: 'frontend',
       techIcons: [FaReact, FaJs, SiTailwindcss]
     },
-    {
-      id: 5,
-      title: 'Social_Media_App',
-      description: 'A simple social media application built with Node.js, Express.js and vanilla web technologies ' +
-          '(HTML, CSS, and JavaScript), offering smooth user interactions through secure APIs for posts, ' +
-          'likes, and user relationships. Its lightweight frontend delivers a clean, responsive experience, ' +
-          'making it ideal for small communities seeking speed and full customization.',
-      image: `${SocialMediaApp}`,
-      liveUrl: 'https://your-weather-app.vercel.app',
-      githubUrl: 'https://github.com/EmmanuelAdah/CodeAlpha_social_media_platform',
-      technologies: ['React', 'JavaScript', 'API Integration', 'Chart.js'],
-      category: 'frontend',
-      techIcons: [FaNodeJs, SiExpress, FaJs, FaHtml5, FaCss3, SiMongodb]
-    }
   ]
 
   const categories = [
