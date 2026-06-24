@@ -1,4 +1,5 @@
 import React from 'react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Nav from './Components/Nav'
 import "./index.css"
 import "./sections.css"
@@ -19,6 +20,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <SpeedInsights />
     </div>
   )
 }
